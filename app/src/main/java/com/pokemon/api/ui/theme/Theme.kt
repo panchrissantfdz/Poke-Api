@@ -1,6 +1,5 @@
 package com.pokemon.api.ui.theme
 
-import android.app.Activity
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
@@ -12,15 +11,31 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalContext
 
 private val DarkColorScheme = darkColorScheme(
-    primary = Purple80,
-    secondary = PurpleGrey80,
-    tertiary = Pink80
+    primary = DarkRed,
+    secondary = PokemonYellow,
+    tertiary = PokemonBlue,
+    background = Black,
+    surface = DarkGrey,
+    onPrimary = White,
+    onSecondary = Black,
+    onTertiary = White,
+    onBackground = White,
+    onSurface = White,
+    error = ErrorRed
 )
 
 private val LightColorScheme = lightColorScheme(
-    primary = Purple40,
-    secondary = PurpleGrey40,
-    tertiary = Pink40
+    primary = PokemonRed,
+    secondary = PokemonYellow,
+    tertiary = PokemonBlue,
+    background = White,
+    surface = LightGrey,
+    onPrimary = White,
+    onSecondary = Black,
+    onTertiary = White,
+    onBackground = Black,
+    onSurface = Black,
+    error = ErrorRed
 
     /* Other default colors to override
     background = Color(0xFFFFFBFE),
@@ -37,7 +52,7 @@ private val LightColorScheme = lightColorScheme(
 fun PokeAPITheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     // Dynamic color is available on Android 12+
-    dynamicColor: Boolean = true,
+    dynamicColor: Boolean = false,
     content: @Composable () -> Unit
 ) {
     val colorScheme = when {

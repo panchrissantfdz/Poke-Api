@@ -11,8 +11,10 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
@@ -24,6 +26,8 @@ import androidx.compose.ui.unit.dp
 import com.google.firebase.auth.FirebaseAuth
 import com.pokemon.api.ui.auth.AuthGate
 import com.pokemon.api.ui.theme.PokeAPITheme
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Home
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -64,7 +68,12 @@ fun TestHomeScreen(
         verticalArrangement = Arrangement.Center
     ) {
         // Ícono visual de éxito
-        Text(text = "✅", style = MaterialTheme.typography.displayLarge)
+        Icon(
+            imageVector = Icons.Default.Home,
+            contentDescription = "Login exitoso",
+            tint = MaterialTheme.colorScheme.primary,
+            modifier = Modifier.size(64.dp)
+        )
 
         Spacer(modifier = Modifier.height(16.dp))
 
