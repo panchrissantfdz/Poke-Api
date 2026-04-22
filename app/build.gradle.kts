@@ -37,6 +37,10 @@ android {
 }
 
 dependencies {
+    val composeBom = platform("androidx.compose:compose-bom:2025.04.00")
+    implementation(composeBom)
+    androidTestImplementation(composeBom)
+
     // Core & Compose
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
@@ -55,21 +59,20 @@ dependencies {
     implementation(libs.play.services.coroutines)
     implementation(libs.kotlinx.coroutines.core)
     implementation("com.google.firebase:firebase-analytics")
+    implementation(libs.androidx.ui.test.junit4)
 
-    // --- TEST UNITARIOS ---
-    testImplementation(libs.junit)
-    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.10.2")
-    testImplementation("io.mockk:mockk:1.14.9")
-    testImplementation("androidx.arch.core:core-testing:2.2.0")
+    // Unit Tests
     testImplementation("junit:junit:4.13.2")
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.9.0")
+    testImplementation("io.mockk:mockk:1.13.10")
+    testImplementation("androidx.arch.core:core-testing:2.2.0")
 
-    // --- TEST INSTRUMENTADOS / INTEGRACIÓN ---
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
-    androidTestImplementation(platform(libs.androidx.compose.bom))
-    androidTestImplementation(libs.androidx.compose.ui.test.junit4)
-    androidTestImplementation("androidx.test.ext:junit:1.2.1")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.6.1")
+// UI Tests — versiones fijas compatibles con compose-bom:2025.04.00
+    androidTestImplementation("androidx.test.ext:junit:1.1.5")           // ← versión fija
+    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.0")// ← versión fija
+    androidTestImplementation("androidx.compose.ui:ui-test-junit4")
+    debugImplementation("androidx.compose.ui:ui-tooling")
+    debugImplementation("androidx.compose.ui:ui-test-manifest")
 
     // Debug
     debugImplementation(libs.androidx.compose.ui.tooling)
