@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "766273050007",
+    "project_id": "memo-moviles",
+    "storage_bucket": "memo-moviles.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:766273050007:android:97c275960c85f4ebed60d2",
+        "android_client_info": {
+          "package_name": "com.example.practicas"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBi1ehRUWGkFAAKKPL2OtxyFpi6Zatkt1U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:766273050007:android:b74c93e5e4fa15eced60d2",
+        "android_client_info": {
+          "package_name": "com.pokemon.api"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBi1ehRUWGkFAAKKPL2OtxyFpi6Zatkt1U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
